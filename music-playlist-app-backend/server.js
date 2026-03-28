@@ -12,10 +12,10 @@ app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
 
-app.use('/api/music', require('./routes/music'));
+
 
 // ✅ MongoDB
-mongoose.connect('mongodb://127.0.0.1:27017/musicapp')
+mongoose.connect('mongodb+srv://admin0901:yogita123@cluster0.r0bxvr0.mongodb.net/musicapp')
     .then(() => console.log('✅ MongoDB Connected'))
     .catch(err => console.log(err));
 
@@ -46,16 +46,6 @@ const Playlist = mongoose.model('Playlist', new mongoose.Schema({
 
 
 
-
-app.get('/', (req, res) => {
-  res.send('Backend is running 🚀');
-});
-app.post('/api/music', (req, res) => {
-  // save music
-});
-app.get('/api/music', (req, res) => {
-  res.send('Music API working 🎵');
-});
 
 
 
