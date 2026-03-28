@@ -40,6 +40,11 @@ const Playlist = mongoose.model('Playlist', new mongoose.Schema({
     }
 }));
 
+app.get('/', (req, res) => {
+  res.send('Backend is running 🚀');
+});
+
+
 // ✅ CREATE PLAYLIST WITH FILES
 app.post('/api/playlists', upload.array('files'), async (req, res) => {
     try {
@@ -130,6 +135,3 @@ app.put('/api/playlists/:id', upload.array('files'), async (req, res) => {
 
 // ✅ START
 app.listen(5000, () => console.log("🚀 Server running on port 5000"));
-app.get('/', (req, res) => {
-  res.send('Backend is running 🚀');
-});
