@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 
+
+app.use('/api/music', require('./routes/music'));
+
 // ✅ MongoDB
 mongoose.connect('mongodb://127.0.0.1:27017/musicapp')
     .then(() => console.log('✅ MongoDB Connected'))
