@@ -40,12 +40,23 @@ const Playlist = mongoose.model('Playlist', new mongoose.Schema({
     }
 }));
 
+
+
+
+
 app.get('/', (req, res) => {
   res.send('Backend is running 🚀');
+});
+app.post('/api/music', (req, res) => {
+  // save music
 });
 app.get('/api/music', (req, res) => {
   res.send('Music API working 🎵');
 });
+
+
+
+
 
 // ✅ CREATE PLAYLIST WITH FILES
 app.post('/api/playlists', upload.array('files'), async (req, res) => {
