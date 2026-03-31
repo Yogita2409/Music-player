@@ -14,7 +14,7 @@ app.use('/uploads', express.static('uploads'));
 
 // ✅ MONGODB CONNECTION (FIXED 🔥)
 mongoose.connect(
-  'mongodb://admin0901:yogita123@ac-ckkoztp-shard-00-00.r0bxvr0.mongodb.net:27017,ac-ckkoztp-shard-00-01.r0bxvr0.mongodb.net:27017,ac-ckkoztp-shard-00-02.r0bxvr0.mongodb.net:27017/?ssl=true&replicaSet=atlas-rae2h1-shard-0&authSource=admin&appName=Cluster0',
+  'abc',
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
